@@ -64,15 +64,16 @@ public class BanckAccount
     public static void main(String[] args )
     {
         BanckAccount obj=new BanckAccount(1,250,"Darwen","gmail.com",48);
-        obj.withdraw();
-        obj.deposit(500);
+        obj.withdraw(100);
+        obj.deposit(100);
     }
 
-    void withdraw(){
+    void withdraw(int x){
+        setBalance(getBalance()-x);
         System.out.println(getBalance());
     }
     void deposit(int x){
-        setBalance(x);
-        System.out.println(x);
+        setBalance(getBalance()+x);
+        System.out.println(getBalance());
     }
 }
